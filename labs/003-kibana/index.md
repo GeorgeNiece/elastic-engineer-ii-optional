@@ -1,4 +1,4 @@
-# Elastic Stack Lab15
+# Elastic Engineer II Optional Lab 003
 
 In this lab we will install and configure Kibana to use as a dashboard for Elasticsearch
 
