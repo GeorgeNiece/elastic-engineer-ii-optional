@@ -1,4 +1,4 @@
-# Elastic Stack Lab17
+# Elastic Engineer II Optional Lab 005
 
 In this lab we are going to 
 * Setup a second local Elasticsearch node 
