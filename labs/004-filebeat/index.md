@@ -1,4 +1,4 @@
-# Elastic Stack Lab16
+# Elastic Engineer II Optional Lab 004
 
 In this lab we are going to install Filebeat and a couple plugins to play around with. 
 
