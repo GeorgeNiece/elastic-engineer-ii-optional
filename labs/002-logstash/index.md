@@ -1,4 +1,4 @@
-# Elastic Stack Lab13
+# Elastic Engineer II Optional Lab 002
 In this lab we are going to install and configure Logstash. 
 
 Run the following to install Logstash.  
