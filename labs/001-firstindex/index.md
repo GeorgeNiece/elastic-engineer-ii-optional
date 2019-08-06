@@ -1,73 +1,8 @@
-# Elastic Stack Lab01
-In this lab we will be installing and setting up Elasticsearch on an Ubuntu VM. 
+# Elastic Engineer II Optional Lab 001
+In this lab we will be creating an index in our Elasticsearch on an Ubuntu VM. 
 
 
-## Install Elasticsearch 
-Elasticsearch is based on Java, so we needed to install a Java environment.  We've already setup OpenJDK, but if you wanted the Oracle Java JDK you could do the following.
-
-(Optional - Utilize Oracle Java rather than OpenJDK)
-Add Oracle Java repository 
-```
-sudo add-apt-repository ppa:webupd8team/java
-```
-
-When you add the repository, you'll see a message license message. Just hit `Enter` and continue. 
-
-Update packages
-```bash
-sudo apt update
-```
-
-Install Java 
-```
-sudo apt install oracle-java8-installer
-```
-(End Optional - Utilize Oracle Java rather than OpenJDK)
-
-Now we can install Elasticsearch itself.
-
-First let’s add the Elasticsearch GPG key to our VM
-```bash
-wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
-```
-
-Now we need to add the Elasticsearch repo to our VM. 
-```bash
-sudo apt-get install apt-transport-https
-```
-
-```bash
-echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
-```
-
-Finally let’s install Elasticsearch
-```bash
-sudo apt update && sudo apt install elasticsearch
-```
-
-After this completes we need to allow external access to our Elasticsearch instance. 
-
-Edit `elasticsearch.yml` 
-```bash
-sudo vi /etc/elasticsearch/elasticsearch.yml
-```
-
-Change `network.host` to `0.0.0.0`
-
-![](index/9DDC1229-DF59-4E55-B355-70954AC080CB.png)
-
- (in vi, use the arrow keys to move where you want to edit, then hit “i” to enter “insert mode” and make your edits. When done, hit `ESC` to exit “insert mode”, then type `:wq` to write your changes and quit vi.)
-
-Now we have to restart the daemon so it re-reads the updated configuration file. 
-```bash
-sudo /bin/systemctl daemon-reload
-sudo /bin/systemctl enable elasticsearch.service
-sudo /bin/systemctl start elasticsearch.service
-```
-
-If everything restarted without any errors Elasticsearch has been successfully installed! 
-
-Let’s confirm it is working as expected by connecting to the API.
+Let’s confirm Elasticsearch is working as expected by connecting to the API.
 ```bash
 curl 127.0.0.1:9200
 ```
