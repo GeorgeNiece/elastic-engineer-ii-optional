@@ -4,7 +4,7 @@ elastic engineer ii optional labs
 ### Labs
 
 
-Lab 1: [Simple Index](labs/001-firstindex/index.md)   
+Lab 1: [Shakespeare Index Bulk Import](labs/001-firstindex/index.md)   
 
 Lab 2: [Logstash Experiment](labs/002-logstash/index.md) 
 
